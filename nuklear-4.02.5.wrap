@@ -1,0 +1,4 @@
+[wrap-git]
+directory = nuklear-4.02.5
+url = https://github.com/meson-library/nuklear.git
+revision = v4.02.5
