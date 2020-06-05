@@ -1,0 +1,14 @@
+option('build_examples',
+        description : 'Build the Nuklear example programs.',
+        type        : 'boolean',
+        value       : false)
+
+option('build_demos',
+        description : 'Build the Nuklear demo programs.',
+        type        : 'boolean',
+        value       : false)
+
+option('build_docs',
+        description : 'Build the Nuklear documentation.',
+        type        : 'boolean',
+        value       : false)

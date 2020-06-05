@@ -393,7 +393,7 @@ int main(int argc, char *argv[])
 
     {   /* skin */
         glEnable(GL_TEXTURE_2D);
-        media.skin = image_load("../skins/gwen.png");
+        media.skin = image_load("../resources/skins/gwen.png");
         media.check = nk_subimage_id(media.skin, 512,512, nk_rect(464,32,15,15));
         media.check_cursor = nk_subimage_id(media.skin, 512,512, nk_rect(450,34,11,11));
         media.option = nk_subimage_id(media.skin, 512,512, nk_rect(464,64,15,15));

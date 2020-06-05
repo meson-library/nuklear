@@ -8,8 +8,8 @@
 #include <assert.h>
 #include <time.h>
 #include <limits.h>
-#include <unistd.h>
-#include <dirent.h>
+#include <io.h>
+#include "dirent.h"
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -823,16 +823,16 @@ int main(int argc, char *argv[])
 
     /* icons */
     glEnable(GL_TEXTURE_2D);
-    media.icons.home = icon_load("../icon/home.png");
-    media.icons.directory = icon_load("../icon/directory.png");
-    media.icons.computer = icon_load("../icon/computer.png");
-    media.icons.desktop = icon_load("../icon/desktop.png");
-    media.icons.default_file = icon_load("../icon/default.png");
-    media.icons.text_file = icon_load("../icon/text.png");
-    media.icons.music_file = icon_load("../icon/music.png");
-    media.icons.font_file =  icon_load("../icon/font.png");
-    media.icons.img_file = icon_load("../icon/img.png");
-    media.icons.movie_file = icon_load("../icon/movie.png");
+    media.icons.home = icon_load("../resources/icon/home.png");
+    media.icons.directory = icon_load("../resources/icon/directory.png");
+    media.icons.computer = icon_load("../resources/icon/computer.png");
+    media.icons.desktop = icon_load("../resources/icon/desktop.png");
+    media.icons.default_file = icon_load("../resources/icon/default.png");
+    media.icons.text_file = icon_load("../resources/icon/text.png");
+    media.icons.music_file = icon_load("../resources/icon/music.png");
+    media.icons.font_file =  icon_load("../resources/icon/font.png");
+    media.icons.img_file = icon_load("../resources/icon/img.png");
+    media.icons.movie_file = icon_load("../resources/icon/movie.png");
     media_init(&media);
 
     file_browser_init(&browser, &media);

@@ -26,12 +26,21 @@
 
 #include <stdio.h>
 
-int main() {
+int main(int argc, char *argv[]) {
+    char *file_name = argv[1];
+    FILE *fp;
+
+    fp = fopen(file_name, "r"); 
+    if (fp == NULL) {
+        perror("Error while opening the input file.\n");
+        exit(-1);
+    }
+
     printf("%s\n", "<meta charset='utf-8' emacsmode='-*- markdown -*-'>");
     printf("%s\n", "<link rel='stylesheet' href='https://casual-effects.com/markdeep/latest/apidoc.css?'>");
 
-    for( int fsm_S = 0, fsm_D = 0, fsm_H = 0; !feof(stdin); ) {
-        int chr = getc(stdin);
+    for( int fsm_S = 0, fsm_D = 0, fsm_H = 0; !feof(fp); ) {
+        int chr = getc(fp);
         if( fsm_S > 3 || fsm_D > 3 || fsm_H > 3 ) {
             putc(chr, stdout);
             if( chr != '\r' && chr != '\n' ) continue;
@@ -44,9 +53,12 @@ int main() {
         else if( fsm_H == 3 && chr == ' ' && !fsm_S && !fsm_D ) fsm_H++;
         else fsm_S = fsm_D = fsm_H = 0;
     }
-
+    
     printf("%s\n", "<script>markdeepOptions={tocStyle:'medium'};</script>");
     printf("%s\n", "<!-- Markdeep: --><script src='https://casual-effects.com/markdeep/latest/markdeep.min.js?'></script>");
+
+    fclose(fp);
+    return 0;
 }
 
 ///

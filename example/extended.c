@@ -786,10 +786,10 @@ int main(int argc, char *argv[])
      * e.g.: ctx->style.font.height = 20. */
     nk_font_atlas_init_default(&atlas);
     nk_font_atlas_begin(&atlas);
-    media.font_14 = nk_font_atlas_add_from_file(&atlas, "../../extra_font/Roboto-Regular.ttf", 14.0f, &cfg);
-    media.font_18 = nk_font_atlas_add_from_file(&atlas, "../../extra_font/Roboto-Regular.ttf", 18.0f, &cfg);
-    media.font_20 = nk_font_atlas_add_from_file(&atlas, "../../extra_font/Roboto-Regular.ttf", 20.0f, &cfg);
-    media.font_22 = nk_font_atlas_add_from_file(&atlas, "../../extra_font/Roboto-Regular.ttf", 22.0f, &cfg);
+    media.font_14 = nk_font_atlas_add_from_file(&atlas, "../resources/extra_font/Roboto-Regular.ttf", 14.0f, &cfg);
+    media.font_18 = nk_font_atlas_add_from_file(&atlas, "../resources/extra_font/Roboto-Regular.ttf", 18.0f, &cfg);
+    media.font_20 = nk_font_atlas_add_from_file(&atlas, "../resources/extra_font/Roboto-Regular.ttf", 20.0f, &cfg);
+    media.font_22 = nk_font_atlas_add_from_file(&atlas, "../resources/extra_font/Roboto-Regular.ttf", 22.0f, &cfg);
     image = nk_font_atlas_bake(&atlas, &w, &h, NK_FONT_ATLAS_RGBA32);
     device_upload_atlas(&device, image, w, h);
     nk_font_atlas_end(&atlas, nk_handle_id((int)device.font_tex), &device.null);}
@@ -797,33 +797,33 @@ int main(int argc, char *argv[])
 
     /* icons */
     glEnable(GL_TEXTURE_2D);
-    media.unchecked = icon_load("../icon/unchecked.png");
-    media.checked = icon_load("../icon/checked.png");
-    media.rocket = icon_load("../icon/rocket.png");
-    media.cloud = icon_load("../icon/cloud.png");
-    media.pen = icon_load("../icon/pen.png");
-    media.play = icon_load("../icon/play.png");
-    media.pause = icon_load("../icon/pause.png");
-    media.stop = icon_load("../icon/stop.png");
-    media.next =  icon_load("../icon/next.png");
-    media.prev =  icon_load("../icon/prev.png");
-    media.tools = icon_load("../icon/tools.png");
-    media.dir = icon_load("../icon/directory.png");
-    media.copy = icon_load("../icon/copy.png");
-    media.convert = icon_load("../icon/export.png");
-    media.del = icon_load("../icon/delete.png");
-    media.edit = icon_load("../icon/edit.png");
-    media.menu[0] = icon_load("../icon/home.png");
-    media.menu[1] = icon_load("../icon/phone.png");
-    media.menu[2] = icon_load("../icon/plane.png");
-    media.menu[3] = icon_load("../icon/wifi.png");
-    media.menu[4] = icon_load("../icon/settings.png");
-    media.menu[5] = icon_load("../icon/volume.png");
+    media.unchecked = icon_load("../resources/icon/unchecked.png");
+    media.checked = icon_load("../resources/icon/checked.png");
+    media.rocket = icon_load("../resources/icon/rocket.png");
+    media.cloud = icon_load("../resources/icon/cloud.png");
+    media.pen = icon_load("../resources/icon/pen.png");
+    media.play = icon_load("../resources/icon/play.png");
+    media.pause = icon_load("../resources/icon/pause.png");
+    media.stop = icon_load("../resources/icon/stop.png");
+    media.next =  icon_load("../resources/icon/next.png");
+    media.prev =  icon_load("../resources/icon/prev.png");
+    media.tools = icon_load("../resources/icon/tools.png");
+    media.dir = icon_load("../resources/icon/directory.png");
+    media.copy = icon_load("../resources/icon/copy.png");
+    media.convert = icon_load("../resources/icon/export.png");
+    media.del = icon_load("../resources/icon/delete.png");
+    media.edit = icon_load("../resources/icon/edit.png");
+    media.menu[0] = icon_load("../resources/icon/home.png");
+    media.menu[1] = icon_load("../resources/icon/phone.png");
+    media.menu[2] = icon_load("../resources/icon/plane.png");
+    media.menu[3] = icon_load("../resources/icon/wifi.png");
+    media.menu[4] = icon_load("../resources/icon/settings.png");
+    media.menu[5] = icon_load("../resources/icon/volume.png");
 
     {int i;
     for (i = 0; i < 9; ++i) {
         char buffer[256];
-        sprintf(buffer, "../images/image%d.png", (i+1));
+        sprintf(buffer, "../resources/images/image%d.png", (i+1));
         media.images[i] = icon_load(buffer);
     }}
 
