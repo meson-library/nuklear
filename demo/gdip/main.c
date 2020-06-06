@@ -15,7 +15,7 @@
 #define NK_INCLUDE_DEFAULT_ALLOCATOR
 #define NK_IMPLEMENTATION
 #define NK_GDIP_IMPLEMENTATION
-#include "../../nuklear.h"
+#include "../../include/nuklear/nuklear.h"
 #include "nuklear_gdip.h"
 
 /* ===============================================================

@@ -20,7 +20,7 @@
 #define NK_INCLUDE_DEFAULT_FONT
 #define NK_IMPLEMENTATION
 #define NK_D3D9_IMPLEMENTATION
-#include "../../nuklear.h"
+#include "../../include/nuklear/nuklear.h"
 #include "nuklear_d3d9.h"
 
 /* ===============================================================

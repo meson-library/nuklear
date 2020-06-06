@@ -19,7 +19,7 @@
 #define NK_IMPLEMENTATION
 #define NK_XLIB_GL3_IMPLEMENTATION
 #define NK_XLIB_LOAD_OPENGL_EXTENSIONS
-#include "../../nuklear.h"
+#include "../../include/nuklear/nuklear.h"
 #include "nuklear_xlib_gl3.h"
 
 #define WINDOW_WIDTH 1200

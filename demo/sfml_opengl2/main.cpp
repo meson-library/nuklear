@@ -21,7 +21,7 @@
 #define NK_INCLUDE_DEFAULT_FONT
 #define NK_IMPLEMENTATION
 #define NK_SFML_GL2_IMPLEMENTATION
-#include "../../nuklear.h"
+#include "../../include/nuklear/nuklear.h"
 #include "nuklear_sfml_gl2.h"
 
 #define WINDOW_WIDTH 1200

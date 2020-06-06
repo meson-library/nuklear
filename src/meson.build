@@ -15,7 +15,12 @@ run_target('generate', command : script)
 
 
 
-install_headers('../nuklear.h', 
+nuklear_dep = declare_dependency(include_directories : include_directories('../include'))
+
+
+
+
+install_headers('../include/nuklear/nuklear.h', 
                  subdir : 'nuklear')
 
 install_data(['LICENSE'],

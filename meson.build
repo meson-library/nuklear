@@ -26,8 +26,6 @@ sources   = []
 c_args    = []
 link_args = []
 
-root_include = include_directories('.')
-
 
 
 

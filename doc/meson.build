@@ -1,7 +1,7 @@
 
 doc = executable('doc', 'stddoc.c')
 
-input = '../nuklear.h'
+input = '../include/nuklear/nuklear.h'
 output = 'documentation.html'
 install_dir = 'share/docs/nuklear'
 

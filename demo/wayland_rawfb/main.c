@@ -20,7 +20,7 @@
 #include <time.h>
 #include <sys/time.h>
 
-#include "../../nuklear.h"
+#include "../../include/nuklear/nuklear.h"
 
 #include "xdg-shell.h"
 #include "nuklear_raw_wayland.h"

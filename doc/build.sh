@@ -1,4 +1,4 @@
 #!/bin/sh
-cat ../nuklear.h|./doc > nuklear.html
+cat ../include/nuklear/nuklear.h|./doc > nuklear.html
 
 
